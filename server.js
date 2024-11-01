@@ -15,6 +15,9 @@ app.use(cors({ origin: "http://localhost:5173" }));
 app.use(express.json());
 
 // Use routes
+app.use("/", (req, res) => {
+    res.send("Hello all aws ec2 success")
+})
 app.use("/api", routes);
 
 // Initialize database
